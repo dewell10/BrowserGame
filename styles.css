@@ -4,7 +4,7 @@
 }
 
 .background{
-    background-color: #121818;
+    background-color: #2F4F4F;
     height: 100vh;
     padding-top: 1px;
 }
@@ -33,7 +33,7 @@
     max-width: 300px;
 }
 .tile{
-    border: 1px solid white;
+    border: 1px solid rgb(247, 245, 245);
     min-width: 100px;
     min-height: 100px;
     display: flex;
@@ -41,4 +41,9 @@
     align-items: center;
     font-size: 50px;
     cursor: pointer;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }

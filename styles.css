@@ -47,3 +47,9 @@
     justify-content: center;
     align-content: center;
 }
+.playerX{
+    color: white;
+}
+.playerO {
+    color: tomato;
+}

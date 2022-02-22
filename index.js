@@ -20,7 +20,7 @@ const winConditions = [
   [2, 4, 6],
 ];
 
-// end game messages
+// messages
 const PLAYERX_WON = "PLAYERX_WON";
 const PLAYERO_WON = "PLAYERO_WON";
 const TIE = "TIE";
@@ -48,36 +48,28 @@ function checkWinOrTie() {
     const playerMarkA = board[winCondition[0]];
     const playerMarkB = board[winCondition[1]];
     const playerMarkC = board[winCondition[2]];
-
     // prevent bug of 3 empty strings declaring gameOver is true
     if (playerMarkA === "" || playerMarkB === "" || playerMarkC === "") {
       continue; // skip this interation of the for loop
     }
-
     // if 3 X's or O's in a row, declare gameOver is true
     if (playerMarkA === playerMarkB && playerMarkB === playerMarkC) {
       gameOver = true;
       break; // ends the for loop
     }
   }
+  // check for tie
+  if (!board.includes('')) gameOver = true
 }
 
 function announceWinnerOrTie() {
   if (gameOver) {
-    switch (currentPlayer === "X" ? PLAYERX_WON : PLAYERO_WON) {
-      case PLAYERO_WON:
-        announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
-        break;
-      case PLAYERX_WON:
-        announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
-        break;
-      case TIE:
-        announcer.innerHTML = "Tie";
-    }
+   (currentPlayer === "X" ? announcer.innerHTML = 'Player <span class="playerX">X</span> Won': announcer.innerHTML = 'Player <span class="playerO">O</span> Won')
     announcer.classList.remove("hide");
-    if (!board.includes("")) announceWinnerOrTie(TIE);
+    if (!board.includes(''))  announcer.innerHTML = "Tie";
   }
 }
+
 
 function changePlayer() {
   playerDisplay.classList.remove(`player${currentPlayer}`);
@@ -115,6 +107,3 @@ tiles.forEach((tile, index) => {
   tile.addEventListener("click", () => playerClick(tile, index));
 });
 resetButton.addEventListener("click", resetBoard);
-
-
-

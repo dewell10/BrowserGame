@@ -13,3 +13,9 @@ INSTRUCTIONS:
 
 
 
+Resource Material: 
+
+https://youtu.be/Y-GkMjUZsmM
+https://youtu.be/B3pmT7Cpi24
+https://youtu.be/5cI0unBbAho
+

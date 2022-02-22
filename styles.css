@@ -1,12 +1,14 @@
 *{
     padding: 0;
     margin: 0;
+    
 }
 
-.background{
-    background-color: #2F4F4F;
-    height: 100vh;
-    padding-top: 1px;
+body{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 .title{
     color: white;
@@ -33,7 +35,7 @@
     max-width: 300px;
 }
 .tile{
-    border: 1px solid rgb(247, 245, 245);
+    box-shadow: 6px 6px 6px rgb(255 255 255 / 50%), -2px -2px 5px rgb(0 0 0 / 87%);
     min-width: 100px;
     min-height: 100px;
     display: flex;
@@ -41,6 +43,12 @@
     align-items: center;
     font-size: 50px;
     cursor: pointer;
+    
+}
+.tile:hover{
+    background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .controls{
     display: flex;
@@ -48,7 +56,7 @@
     align-content: center;
 }
 .playerX{
-    color: white;
+    color: yellow;
 }
 .playerO {
     color: tomato;
